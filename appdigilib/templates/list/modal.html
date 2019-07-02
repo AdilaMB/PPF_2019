@@ -1,0 +1,25 @@
+<!-- MODAL BODY  -->
+          <h2>{{ title }}</h2>
+          <div class="col-md-6"><img class="img-responsive" style="width:100%" src="{{images.image.url}}"></div>
+          <div class="col-md-6">
+            <div>{{author}}</div>
+            <div>{{year}}</div>
+              <a href="{{doi}}">{{doi}}</a></br>
+              {% if categories %}
+                <label>CATEGORIES: </label>
+                {% for c in categories %}
+                   <div>{{c.category}}</div>
+                {% endfor %}
+              {% else %}
+                <h5>Impossible to load these categories. </h5>
+              {% endif %}
+
+              {% if task %}
+                 <label>TASKS: </label>
+                  {% for t in task %}
+                    <div>{{t.task}}</div>
+                  {% endfor %}
+              {% else %}
+                  <h5>Impossible to load these tasks. </h5>
+              {% endif %}
+            </div>
