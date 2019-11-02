@@ -54,7 +54,6 @@
                     <li class="list-group-item">Analytic Tasks</li>
                         {% if tasks %}
                             {% for task in tasks %}
-
                                 <label>
                                     <input class="check_task" type="checkbox" name="{{task.task}}" aria-label="Checkbox for following text input" aria-valuetext="Source" id="{{task.task}}" checked>
                                     {{task.task}}
@@ -62,7 +61,7 @@
 
                             {% endfor %}
                         {% else %}
-                            <h1>There is not task to show</h1>
+                            <h3>There is not task to show</h3>
                         {% endif %}
                     <li class="list-group-item">Visualization Categories</li>
                         {% if categories %}
@@ -73,19 +72,19 @@
                                 </label>
                             {% endfor%}
                         {% else %}
-                            <h1>There is not category to show</h1>
+                            <h3>There is not category to show</h3>
                         {% endif %}
 
                     <li class="list-group-item">Data Source</li>
-                        {% if categories %}
-                            {% for category in categories %}
+                        {% if dataSources %}
+                            {% for dataSource in dataSources %}
                                 <label>
-                                   <input class="check_data" type="checkbox" name="{{category.category}}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{category.category}}">
-                                   {{category.category}}
+                                   <input class="check_data" type="checkbox" name="{{dataSource.data}}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{dataSource.data}}">
+                                   {{dataSource.data}}
                                 </label>
                             {% endfor%}
                         {% else %}
-                            <h1>There is not data source to show</h1>
+                            <h3>There is not data source to show</h3>
                         {% endif %}
                      </ul>
                 <button type="submit" class="btn btn-primary" onclick="{{ standardization }}"> Standardization </button>

@@ -39,7 +39,7 @@ def show_list(request):
     categories = Category.objects.all()                                 # Save all categories for left menu
     tasks = AnaliticTask.objects.all()                                  # Save all analytical tasks for left menu
     images = Image.objects.all().order_by('article')                    # Save all the images of the articles
-    dataSource = DataSource.objects.all()                               # Save all data sources for left menu
+    dataSources = DataSource.objects.all()                               # Save all data sources for left menu
 
 
     return render(request, 'list/index_list.html',
@@ -47,7 +47,7 @@ def show_list(request):
                    'categories': categories,                            # load all the data from the left menu
                    'tasks': tasks,
                    'images': images,
-                   'dataSource': dataSource}
+                   'dataSource': dataSources}
                   )
 
 """Method to update the articles depending on the category marked in the view:
