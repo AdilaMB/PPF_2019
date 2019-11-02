@@ -3,8 +3,8 @@ Create by abarrio
 Date: 08/04/2019
 """
 from django.urls import path
-from appdigilib.views import *
 from appdigilib import views
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -18,6 +18,8 @@ urlpatterns = [
     path('index/c2', views.update_article_task, name ='list_task'),
     path('search/', views.search, name ='buscar'),
     path('detail/', views.details, name ='detail'),
+    path('standardization/file', views.file_manager, name ='standardization'),
+
 
 ]
 if settings.DEBUG:

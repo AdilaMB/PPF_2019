@@ -76,7 +76,20 @@
                             <h1>There is not category to show</h1>
                         {% endif %}
 
-                    </ul>
+                    <li class="list-group-item">Data Source</li>
+                        {% if categories %}
+                            {% for category in categories %}
+                                <label>
+                                   <input class="check_data" type="checkbox" name="{{category.category}}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{category.category}}">
+                                   {{category.category}}
+                                </label>
+                            {% endfor%}
+                        {% else %}
+                            <h1>There is not data source to show</h1>
+                        {% endif %}
+                     </ul>
+                <button type="submit" class="btn btn-primary" onclick="{{ standardization }}"> Standardization </button>
+
                 </nav>
            </div>
         </div>

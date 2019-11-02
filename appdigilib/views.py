@@ -1,22 +1,22 @@
 """
 Create by abarrio
 Date: 08/04/2019
+Manager for the articles.
 """
+import os
+import simplejson
 from django.shortcuts import render, redirect
 import json as JSON
 from django.core import serializers
 from django.template.loader import render_to_string
-from django.views.generic import ListView
 from django.views.decorators.csrf import requires_csrf_token
 from django.http import JsonResponse, HttpResponse
-import simplejson
-from django.http import QueryDict
-from .forms import *
-import datetime
+from appdigilib.forms import *
 from django.db.models import Q
-from django.template import RequestContext
-from appdigilib.models import Article, Category, AnaliticTask, Image
-from appdigilib.forms import ArticleForm, CategoryForm, AnaliticTaskForm
+from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
+from wordcloud import WordCloud
+from os import path
+
 
 
 """ Method to render the main page:
@@ -39,14 +39,16 @@ def show_list(request):
     categories = Category.objects.all()                                 # Save all categories for left menu
     tasks = AnaliticTask.objects.all()                                  # Save all analytical tasks for left menu
     images = Image.objects.all().order_by('article')                    # Save all the images of the articles
+    dataSource = DataSource.objects.all()                               # Save all data sources for left menu
+
 
     return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
                    'categories': categories,                            # load all the data from the left menu
                    'tasks': tasks,
-                   'images': images}
+                   'images': images,
+                   'dataSource': dataSource}
                   )
-
 
 """Method to update the articles depending on the category marked in the view:
     Input: Ajax @peticion of the view with the check marked.
@@ -174,7 +176,7 @@ def details(request):
         doi = data_article.doi
         images = data_article.image
 
-    return render(request, 'list/modal.html',                               #Create the body of the modal with the respective data
+    return render(request, 'list/modal.html',  #Create the body of the modal with the respective data
                   {'categories': categories, 'year': year, 'doi':doi,
                    'task': task, 'images': images,
                    'title': title, 'author': author
@@ -206,3 +208,20 @@ def add_image(request):
 """Auxiliary method that shows a standard error"""
 def error(request):
     return HttpResponse("Something is wrong.")
+
+"""
+                                ---Work section with Visualization---
+"""
+
+"""Method that allow work with file"""
+def file_manager(request):
+    # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
+    d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
+
+    # Read the whole text.
+    text = open(path.join(d, 'constitution.txt')).read()
+
+    # Generate a word cloud image
+    wordcloud = WordCloud().generate(text)
+
+    return HttpResponse("")
