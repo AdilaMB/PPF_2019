@@ -11,7 +11,7 @@ from django.core.validators import MinValueValidator
 
 
 # Model for category entity
-class Data(models.Model):
+class Category(models.Model):
     category = models.CharField(max_length=250)
 
     def __str__(self):
