@@ -18,7 +18,7 @@ urlpatterns = [
     path('index/c2', views.update_article_task, name ='list_task'),
     path('search/', views.search, name ='buscar'),
     path('detail/', views.details, name ='detail'),
-    path('standardization/file', views.file_manager, name ='standardization'),
+    path('standardization/file', views.data_set, name ='standardization'),
 
 
 ]
