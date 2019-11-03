@@ -14,8 +14,8 @@ from django.http import JsonResponse, HttpResponse
 from appdigilib.forms import *
 from django.db.models import Q
 from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
-from wordcloud import WordCloud
 from os import path
+
 
 
 
@@ -40,14 +40,14 @@ def show_list(request):
     tasks = AnaliticTask.objects.all()                                  # Save all analytical tasks for left menu
     images = Image.objects.all().order_by('article')                    # Save all the images of the articles
     dataSources = DataSource.objects.all()                               # Save all data sources for left menu
-
+    print(dataSources)
 
     return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
                    'categories': categories,                            # load all the data from the left menu
                    'tasks': tasks,
                    'images': images,
-                   'dataSource': dataSources}
+                   'dataSources': dataSources}
                   )
 
 """Method to update the articles depending on the category marked in the view:
