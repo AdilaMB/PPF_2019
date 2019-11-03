@@ -4,12 +4,13 @@ Date: 08/04/2019
 """
 from django.urls import path
 from appdigilib import views
-
+from appdigilib import view_aux
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 #My own route file
+from appdigilib.view_aux import text_mining
+
 urlpatterns = [
 
     path('', views.show_list, name ='post_list'),
@@ -18,7 +19,8 @@ urlpatterns = [
     path('index/c2', views.update_article_task, name ='list_task'),
     path('search/', views.search, name ='buscar'),
     path('detail/', views.details, name ='detail'),
-    path('standardization/file', views.data_set, name ='standardization'),
+
+    path('heatmap/', text_mining.manager_visualizator, name ='manager'),
 
 
 ]

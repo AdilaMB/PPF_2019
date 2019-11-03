@@ -14,13 +14,7 @@ from django.http import JsonResponse, HttpResponse
 from appdigilib.forms import *
 from django.db.models import Q
 from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
-from os import path
-from wordcloud import WordCloud
 
-#For visualization
-import seaborn as sns
-import pandas as pd
-import numpy as np
 
 
 """ Method to render the main page:
@@ -216,28 +210,3 @@ def error(request):
 """
                                 ---Work section with Visualization---
 """
-
-"""Method that allow work with file
-1. Load the file
-2. Manage the file
-"""
-def file_manager(request):
-    # get data directory (using getcwd() is needed to support running example in generated IPython notebook)
-    d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
-
-    # Read the whole text.
-    text = open(path.join(d, 'constitution.txt')).read()
-
-    # Generate a word cloud image
-    wordcloud = WordCloud().generate(text)
-
-    return HttpResponse("")
-
-
-""" Visualization of HeatMap"""
-def data_set():
-    # Create a dataset (fake)
-    df = pd.DataFrame(np.random.random((10, 10)), columns=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"])
-
-    sns.heatmap(df, annot=True, annot_kws={"size": 7})
-    sns.plt.show()
