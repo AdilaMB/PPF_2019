@@ -79,8 +79,8 @@
                         {% if dataSources %}
                             {% for dataSource in dataSources %}
                                 <label>
-                                   <input class="check_data" type="checkbox" name="{{dataSource.data}}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{dataSource.data}}">
-                                   {{dataSource.data}}
+                                   <input class="check_data" type="checkbox" name="{{ dataSource }}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{ dataSource.data }}">
+                                   {{ dataSource.data }}
                                 </label>
                             {% endfor%}
                         {% else %}
