@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     $('.check_cat').change(function() {
         ajax_post_categorias();
+
     });
 
 
@@ -37,8 +38,7 @@ $(document).ready(function() {
 
     });
 
-
-function getCookie(name) {
+    function getCookie(name) {
 
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -126,4 +126,14 @@ async function ajax_post_categorias() {
         });
 
     };
+
+
+
+//Auxiliary Function to test button
+function enviar() {
+    var msj = "¿Tas?";
+    alert(msj);
+};
+
 });
+

@@ -210,3 +210,20 @@ def error(request):
 """
                                 ---Work section with Visualization---
 """
+#def heatmap(request):
+    # Create a dataset (fake)
+    #if 'Stand' in request.GET:
+        #url = 'https://python-graph-gallery.com/wp-content/uploads/mtcars.csv'
+        #df = pd.read_csv(url)
+        #df = df.set_index('model')
+        #del df.index.name
+        #data = sns.clustermap(df)
+    #print(1)
+
+    # Standardize or Normalize every column in the figure
+    # Standardize:
+    #sns.clustermap(df, standard_scale=1)
+    # Normalize
+    #sns.clustermap(df, z_score=1)
+
+    #return render(request, 'list/search.html')

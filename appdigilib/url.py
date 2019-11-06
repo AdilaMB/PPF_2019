@@ -19,8 +19,11 @@ urlpatterns = [
     path('index/c2', views.update_article_task, name ='list_task'),
     path('search/', views.search, name ='buscar'),
     path('detail/', views.details, name ='detail'),
+    #path('heatmap/', views.heatmap, name ='manager'),
 
-    path('heatmap/', text_mining.manager_visualizator, name ='manager'),
+    path('heatmap/', text_mining.heatmap, name ='heatmap'),
+    path('wordcloud/', text_mining.wordcloud, name ='wordcloud'),
+    path('plot/', text_mining.plot, name ='plot'),
 
 
 ]
