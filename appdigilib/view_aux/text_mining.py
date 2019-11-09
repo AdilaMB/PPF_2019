@@ -2,28 +2,20 @@
 Create by abarrio
 Date: 01/11/2019
 Manager to text mining.
-"""
-import base64
-import io
-from os import path
 
-from django.shortcuts import render
-from django.template import RequestContext
-from django.template.loader import render_to_string
+
+import io
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from wordcloud import WordCloud
-from os import path
 from django.http import HttpResponse, response
 from random import sample
-
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+"""
 
-
-
-"""Method for mananger to visualization type """
+"""Method for mananger to visualization type 
 #def manager_visualizator(request):
 
 def numbers_to_visualization(argument):
@@ -36,9 +28,9 @@ def numbers_to_visualization(argument):
     return HttpResponse("")
 
 
-""" Visualization of "HeatMap long format" is when each line represents an observation. You have 3 columns: individual, 
+ Visualization of "HeatMap long format" is when each line represents an observation. You have 3 columns: individual, 
 variable name, and value (x, y and z). You can plot a heatmap from this kind of data
-"""
+
 def heatmap(request):
     # Create a dataset (fake)
     url = 'https://python-graph-gallery.com/wp-content/uploads/mtcars.csv'
@@ -60,13 +52,14 @@ def heatmap(request):
     png_output = io.BytesIO(fig)
     fig.set_canvas(plt.gcf().canvas)
 
-    canvas = plt.savefig('figura.png', facecolor =fig.get_facecolor())
+    canvas = plt.savefig('figura.png', facecolor = fig.get_facecolor())
     response = HttpResponse(png_output.getvalue(), content_type='images/figura.png')
 
     #return f"<img src='data:image/png;base64,{data}'/>"
 
     response = HttpResponse(png_output.getvalue(), canvas)
     return response
+
 
 def plot(request):
     # Creamos los datos para representar en el gráfico
@@ -104,7 +97,7 @@ def plot(request):
     return response
 
 
-"""Visualization of WordCloud"""
+Visualization of WordCloud
 def wordcloud(request):
     # Create a list of word
     text = (
@@ -119,4 +112,6 @@ def wordcloud(request):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
     plt.margins(x=0, y=0)
+
     return HttpResponse(wordcloud)
+    """

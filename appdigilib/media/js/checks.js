@@ -1,42 +1,92 @@
 $(document).ready(function() {
 
-    $('.check_cat').change(function() {
+    $('.check_cat').change(function () {
         ajax_post_categorias();
 
     });
 
 
-    $('.check_task').change(function() {
+    $('.check_task').change(function () {
         ajax_post_tareas();
     });
 
 
-    $('#Modal').on('shown.bs.modal', function(event) {
+    $('#Modal').on('shown.bs.modal', function (event) {
         id_article = event.relatedTarget.id;
         var modal = $(this);
 
         $.ajax({
-            beforeSend: function(xhr, settings) {
-          var csrftoken = getCookie('csrftoken');
-          xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          },
-            type:'POST',
-            url:'detail/',
+            beforeSend: function (xhr, settings) {
+                var csrftoken = getCookie('csrftoken');
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            },
+            type: 'POST',
+            url: 'detail/',
             dataType: 'html',
             data: {
-              'id_article': id_article,
-
-              },
-            success: function(response){
-              modal.find('.modal-body').html(response);
+                'id_article': id_article,
 
             },
-            error: function(xhr, status, error) {
+            success: function (response) {
+                modal.find('.modal-body').html(response);
+
+            },
+            error: function (xhr, status, error) {
                 alert("This article is not exist.");
             }
         });
 
     });
+
+
+    $('#searchbutton').click(function f() {
+        var my_form = $('#searchInput').val();
+        alert(my_form);
+         var lista_task_buscar = [];
+         $( '.check_task' ).each(
+             function( index ) {
+                  if(this.checked) {
+                      lista_task_buscar.push($(this).attr('name'));
+                      }
+                  else{} })
+        alert(lista_task_buscar);
+        var lista_cat_buscar = []
+        $( '.check_cat' ).each(function( index ) {
+            if(this.checked) {
+                lista_cat_buscar.push($(this).attr('name'));
+
+            }
+            else{
+                //lista_cat_des.push($(this).attr('name'));
+            }
+
+             })
+        alert(lista_cat_buscar);
+        $.ajax({
+            beforeSend: function(xhr, settings) {
+            var csrftoken = getCookie('csrftoken');
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+          },
+            type:'POST',
+            url:'search/',
+            dataType:'html',
+            data: {
+                //'lista_c': lista_cat_des,
+                'list_task_search': lista_task_buscar,
+                'list_cat_search': lista_cat_buscar,
+                'my_form': my_form,
+            },
+
+            success: function(json){
+                $('#content1').html(json);
+            },
+            error: function(xhr, status, error) {
+                alert("error");
+            }
+        });
+
+    });
+
 
     function getCookie(name) {
 

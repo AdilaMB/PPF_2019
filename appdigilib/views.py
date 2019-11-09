@@ -5,16 +5,18 @@ Manager for the articles.
 """
 import os
 import simplejson
+import requests
 from django.shortcuts import render, redirect
 import json as JSON
 from django.core import serializers
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import requires_csrf_token
 from django.http import JsonResponse, HttpResponse
+from pandas._libs import json
+
 from appdigilib.forms import *
 from django.db.models import Q
 from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
-
 
 
 """ Method to render the main page:
@@ -24,20 +26,28 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
 """
 @requires_csrf_token
 def show_list(request):
-    if request.method == 'POST':                                        # Check if the POST method comes from the search
-        string_search = request.POST.get('search')                      # I save the text to search
+    if request.method == 'POST':                                       # Check if the POST method comes from the search
+        articles, tasks, categories, dataSources = search(request)
+        print(articles)
+        print(tasks)
+        print(categories)
+        print(dataSources)
+        #articles = r('articles')
+        #tasks = search(request).get('list_task_serch')
+        #categories = search(request).get('lista_cat_buscar')
+        #, tasks, categories, dataSources
 
-        articles = Article.objects.filter(                              # Query to search by title and author
-            Q(title__contains=string_search) |
-            Q(author__contains=string_search)
-        )
+
     else:
         articles = Article.objects.all().order_by('published_date')     # Show all articles without having searched
 
-    categories = Category.objects.all()                                 # Save all categories for left menu
-    tasks = AnaliticTask.objects.all()                                  # Save all analytical tasks for left menu
+
+
     images = Image.objects.all().order_by('article')                    # Save all the images of the articles
-    dataSources = DataSource.objects.all()                               # Save all data sources for left menu
+    dataSources = DataSource.objects.all()
+    categories = Category.objects.all()  # Save all categories for left menu
+    tasks = AnaliticTask.objects.all()  # Save all analytical tasks for left menu
+    # Save all data sources for left menu
 
     return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
@@ -143,14 +153,34 @@ def search_task(s_article, s_task):
 @requires_csrf_token
 def search(request):
 
-    string_search = request.POST.get('search')                                          #The text that I have to search
+    search_query = request.POST.get('my_form')
+    list_task_serch = request.POST.getlist('list_task_search[]')
+    lista_cat_buscar = request.POST.getlist('list_cat_search[]')
+    dataSources = DataSource.objects.all()
+    all_articles = []
 
-    articles_names = Article.objects.filter(Q(title__contains=string_search) |          #Query to search by title, author and Summary
-                                             Q(author__contains=string_search |
-                                             Q(text__contains=string_search)))
+    if search_query:
+        articles = list(Article.objects.filter(  # Query to search by title and author
+            Q(title__contains= search_query) |
+            Q(author__contains =search_query)))
+        print(articles)
+        if articles:
+            for x in range(0, len(articles)):
+                print(articles[x])
+                for y in range(0, len(list_task_serch)):
+                    print(list_task_serch[y])
+                    if search_task(articles[x], list_task_serch[y]):                     #Auxiliary method that says if a task is in an article
+                        all_articles.append(articles[x])
+                        break
 
-    html = render_to_string('list/render.html', {'articles': articles_names})
-    return HttpResponse(html)                                                           #Returns the found articles
+    """data = {'articles': all_articles, 'list_task_serch':list_task_serch,
+            'lista_cat_buscar':lista_cat_buscar,
+            'dataSources': dataSources}
+    data = JSON.dumps(data)"""
+
+
+    #return HttpResponse(html), list_task_serch, lista_cat_buscar, dataSources
+    return  all_articles, list_task_serch, lista_cat_buscar, dataSources                                                      #Returns the found articles
 
 
 """Method to visualize the details of the article

@@ -28,7 +28,7 @@
 </head>
 <body>
 
-    <!--Top Menu-->
+    <!--Top Menu   onclick="{{ buscar }}" -->
     <div class="jumbotron">
         <div class="container text-center">
              <h1>Digital Library</h1>
@@ -36,9 +36,9 @@
         </div>
         <!--<a type="" href="{% url 'nova_img' %}">Imagen</a>  data-toggle="modal" data-target="#Modal"-->
         <div class="container text-center" width="100%" placeholder="col-xs-1">
-            <form method="POST" class="form-inline center" action="/" id="Search"> {%csrf_token %}
-                <input type="text" name="search" class="form-control search-group-continer" size="100%" aling placeholder="Text in the title or author's name" align="center">
-                <button type="submit" class="btn btn-primary" onclick="{{ buscar }}" value ="Search">Search</button>
+            <form method="POST" class="form-inline center" action="/" id="SearchForm"> {%csrf_token %}
+                <input type="text" name="searchInput" id="searchInput" class="form-control search-group-continer" size="100%" aling placeholder="Text in the title or author's name" align="center">
+                <button type="submit" class="btn btn-primary"  value ="Search" id="searchbutton" onclick="{{ buscar }}"> Search</button>
             </form>
         </div>
     </div>
@@ -88,9 +88,10 @@
                         {% endif %}
                      </ul>
 
-                <li><a href="{% url 'wordcloud' %}"> WordCloud </a></li>
-                <li><a href="{% url 'heatmap' %}"> HeatMap </a></li>
-                <li><a href="{% url 'plot' %}"> Plot </a></li>
+                <!--<li><a href=""> WordCloud </a></li>
+                <li><a href=""> HeatMap </a></li>
+                <li><a href=""> Plot </a></li>
+-->
 
                 </nav>
            </div>
