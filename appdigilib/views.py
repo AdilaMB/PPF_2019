@@ -3,17 +3,10 @@ Create by abarrio
 Date: 08/04/2019
 Manager for the articles.
 """
-import os
-import simplejson
-import requests
 from django.shortcuts import render, redirect
-import json as JSON
-from django.core import serializers
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import requires_csrf_token
-from django.http import JsonResponse, HttpResponse
-from pandas._libs import json
-
+from django.http import HttpResponse
 from appdigilib.forms import *
 from django.db.models import Q
 from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
@@ -27,13 +20,9 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
 @requires_csrf_token
 def show_list(request):
 
-    images = Image.objects.all().order_by('article')
-    if request.method == 'POST':                                       # Check if the POST method comes from the search
-        print(request.POST.getlist('list_task_search[]'))
-        print(request.POST.getlist('list_cat_search[]'))
-        print(request.POST.get('my_form'))
-        print("va a llamar al search")
-        articles, tasks, categories, dataSources = search(request)
+    images = Image.objects.all().order_by('article')                            # Save all the images of the articles
+    if request.method == 'POST':                                                # Check if the POST method comes from the search
+        articles, tasks, categories, dataSources = search(request)              #Search articles by selected categories and tasks
         html = render_to_string('list/render.html', {'articles': articles,
                                                      'categories': categories,  # load all the data from the left menu
                                                      'tasks': tasks,
@@ -42,18 +31,18 @@ def show_list(request):
                                                      })
 
     else:
-        articles = Article.objects.all().order_by('published_date')     # Show all articles without having searched
+        articles = Article.objects.all().order_by('published_date')             # Show all articles without having searched
         dataSources = DataSource.objects.all()
-        categories = Category.objects.all()  # Save all categories for left menu
-        tasks = AnaliticTask.objects.all()  # Save all analytical tasks for left menu
+        categories = Category.objects.all()                                     # Save all categories for left menu
+        tasks = AnaliticTask.objects.all()                                      # Save all analytical tasks for left menu
         html = render_to_string('list/index_list.html',{'articles': articles,                                # List the items in the main interface
                                                         'categories': categories,                            # load all the data from the left menu
                                                         'tasks': tasks,
                                                         'images': images,
                                                         'dataSources': dataSources})
 
-     # Save all the images of the articles
-    # Save all data sources for left menu
+
+
     return HttpResponse(html)
     """return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
@@ -152,7 +141,7 @@ def search_task(s_article, s_task):
     return False
 
 
-"""Method to search for articles, giving a phrase
+"""Method to search for articles, giving a phrase and match the left menu check
     Input: @text
     Returns: @ List of articles that contain the text in the Title or Author
 """

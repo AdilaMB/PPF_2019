@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appdigilib/media/js/checks.js" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/media/js/checks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appdigilib/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +27,14 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="159" column="20" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
+            <state relative-caret-position="95">
+              <caret line="143" column="79" selection-start-line="143" selection-start-column="79" selection-end-line="143" selection-end-column="79" />
               <folding>
                 <element signature="e#0#68#1" />
-                <element signature="e#69#78#0" expanded="true" />
+                <element signature="e#70#115#0" expanded="true" />
+                <element signature="e#555#728#1" />
+                <element signature="e#783#2491#0" />
+                <element signature="e#2078#2491#1" />
                 <element signature="e#2412#2728#1" />
                 <element signature="e#2874#4042#0" />
                 <element signature="e#3964#4295#1" />
@@ -40,7 +43,6 @@
                 <element signature="e#5727#6047#0" />
                 <element signature="e#6050#6230#1" />
                 <element signature="e#6272#6559#0" />
-                <element signature="e#6562#6709#1" />
                 <element signature="e#7430#9105#0" />
                 <element signature="e#8140#8288#1" />
                 <element signature="e#8315#9538#0" />
@@ -149,19 +151,6 @@
               <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
               <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
@@ -289,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573408371527</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update Search(): Done">
+      <created>1573411837002</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573411837002</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -303,7 +299,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -396,11 +391,12 @@
     <MESSAGE value="Search update" />
     <MESSAGE value="Update requirement" />
     <MESSAGE value="Render search()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Render search()" />
+    <MESSAGE value="Update Search(): Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Search(): Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -431,7 +427,10 @@
           <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -440,7 +439,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -483,7 +481,10 @@
           <caret line="76" column="29" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -492,7 +493,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -535,7 +535,10 @@
           <caret line="221" column="21" selection-start-line="221" selection-start-column="21" selection-end-line="221" selection-end-column="21" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -544,7 +547,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -601,7 +603,10 @@
           <caret line="212" selection-start-line="212" selection-end-line="212" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -610,7 +615,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -653,7 +657,10 @@
           <caret line="212" selection-start-line="212" selection-end-line="212" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -662,7 +669,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -705,7 +711,10 @@
           <caret line="242" column="18" lean-forward="true" selection-start-line="242" selection-start-column="18" selection-end-line="242" selection-end-column="18" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -714,7 +723,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
@@ -840,11 +848,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="159" column="20" selection-start-line="159" selection-start-column="20" selection-end-line="159" selection-end-column="20" />
+        <state relative-caret-position="95">
+          <caret line="143" column="79" selection-start-line="143" selection-start-column="79" selection-end-line="143" selection-end-column="79" />
           <folding>
             <element signature="e#0#68#1" />
-            <element signature="e#69#78#0" expanded="true" />
+            <element signature="e#70#115#0" expanded="true" />
+            <element signature="e#555#728#1" />
+            <element signature="e#783#2491#0" />
+            <element signature="e#2078#2491#1" />
             <element signature="e#2412#2728#1" />
             <element signature="e#2874#4042#0" />
             <element signature="e#3964#4295#1" />
@@ -853,7 +864,6 @@
             <element signature="e#5727#6047#0" />
             <element signature="e#6050#6230#1" />
             <element signature="e#6272#6559#0" />
-            <element signature="e#6562#6709#1" />
             <element signature="e#7430#9105#0" />
             <element signature="e#8140#8288#1" />
             <element signature="e#8315#9538#0" />
