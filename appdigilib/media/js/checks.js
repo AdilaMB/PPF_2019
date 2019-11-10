@@ -134,21 +134,22 @@ async function ajax_post_categorias() {
 
 async function ajax_button_search() {
      var my_form = $('#searchInput').val();
-     alert(my_form);
+     $('#searchInput').val('');
+
      var lista_task_buscar = [];
      $( '.check_task' ).each(function( index ) {
          if(this.checked) {
              lista_task_buscar.push($(this).attr('name'));}
          else{}
      });
-     alert(lista_task_buscar);
+
      var lista_cat_buscar = [];
      $( '.check_cat' ).each(function( index ) {
         if(this.checked) {
             lista_cat_buscar.push($(this).attr('name')); }
         else{}
      });
-     alert(lista_cat_buscar);
+
      var datos = {
          'list_task_search': lista_task_buscar,
          'list_cat_search': lista_cat_buscar,

@@ -159,33 +159,34 @@ def search_task(s_article, s_task):
 @requires_csrf_token
 def search(request):
 
-    print("entro en el seach")
     search_query = request.POST.get('my_form')
-    print(search_query)
     list_task_serch = request.POST.getlist('list_task_search[]')
-    print(list_task_serch)
     lista_cat_buscar = request.POST.getlist('list_cat_search[]')
-    print(lista_cat_buscar)
     dataSources = DataSource.objects.all()
     all_articles = []
 
     if search_query:
-        articles = list(Article.objects.filter(  # Query to search by title and author
+        articles = list(Article.objects.filter(                         # Query to search by title and author
             Q(title__contains= search_query) |
             Q(author__contains =search_query)))
-        print(articles)
-        if articles:
-            for x in range(0, len(articles)):
+
+        if articles:                                                    #Search in the articles of the query if they have the task marked
+            for x in range(0, (len(articles)-1)):
                 print(articles[x])
                 for y in range(0, len(list_task_serch)):
                     print(list_task_serch[y])
-                    if search_task(articles[x], list_task_serch[y]):                     #Auxiliary method that says if a task is in an article
+                    if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
+                        all_articles.append(articles[x])
+                        articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
+                        break
+        if articles:                                                    #The remaining items, see if they have the category marked
+            for x in range(0, len(articles)):
+                for z in range(0, len(lista_cat_buscar)):
+                    print(lista_cat_buscar[z])
+                    if serach_category(articles[x], lista_cat_buscar[z]):
                         all_articles.append(articles[x])
                         break
-                for c in range(0, len(lista_cat_buscar)):
-                    if serach_category(articles[c], lista_cat_buscar):
-                        all_articles.append(articles[c])
-                        break
+
     return all_articles, list_task_serch, lista_cat_buscar, dataSources
 
 
