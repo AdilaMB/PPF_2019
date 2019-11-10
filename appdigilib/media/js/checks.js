@@ -146,13 +146,13 @@ async function ajax_button_search() {
      $( '.check_cat' ).each(function( index ) {
         if(this.checked) {
             lista_cat_buscar.push($(this).attr('name')); }
-        else{//lista_cat_des.push($(this).attr('name'));
-            }
+        else{}
      });
      alert(lista_cat_buscar);
      var datos = {
          'list_task_search': lista_task_buscar,
          'list_cat_search': lista_cat_buscar,
+         'my_form': my_form,
      }
      $.ajax({
          type:'POST',

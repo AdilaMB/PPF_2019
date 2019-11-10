@@ -1,7 +1,5 @@
 {% block content %}
-
     {% if articles %}
-
         {% for article in articles %}
          {% if forloop.counter0|divisibleby:"3" == 1 %}
             {% if forloop.counter0 > 0 %}

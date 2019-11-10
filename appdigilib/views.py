@@ -26,38 +26,42 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
 """
 @requires_csrf_token
 def show_list(request):
+
+    images = Image.objects.all().order_by('article')
     if request.method == 'POST':                                       # Check if the POST method comes from the search
         print(request.POST.getlist('list_task_search[]'))
         print(request.POST.getlist('list_cat_search[]'))
+        print(request.POST.get('my_form'))
         print("va a llamar al search")
         articles, tasks, categories, dataSources = search(request)
-        #search_query = request.POST.get('my_form')
-        #list_task_serch = request.POST.getlist('list_task_search[]')
-        #lista_cat_buscar = request.POST.getlist('list_cat_search[]')
-
-        #articles = r('articles')
-        #tasks = search(request).get('list_task_serch')
-        #categories = search(request).get('lista_cat_buscar')
-        #, tasks, categories, dataSources
-
+        html = render_to_string('list/render.html', {'articles': articles,
+                                                     'categories': categories,  # load all the data from the left menu
+                                                     'tasks': tasks,
+                                                     'images': images,
+                                                     'dataSources': dataSources
+                                                     })
 
     else:
         articles = Article.objects.all().order_by('published_date')     # Show all articles without having searched
         dataSources = DataSource.objects.all()
         categories = Category.objects.all()  # Save all categories for left menu
         tasks = AnaliticTask.objects.all()  # Save all analytical tasks for left menu
+        html = render_to_string('list/index_list.html',{'articles': articles,                                # List the items in the main interface
+                                                        'categories': categories,                            # load all the data from the left menu
+                                                        'tasks': tasks,
+                                                        'images': images,
+                                                        'dataSources': dataSources})
 
-
-    images = Image.objects.all().order_by('article')                    # Save all the images of the articles
+     # Save all the images of the articles
     # Save all data sources for left menu
-
-    return render(request, 'list/index_list.html',
+    return HttpResponse(html)
+    """return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
                    'categories': categories,                            # load all the data from the left menu
                    'tasks': tasks,
                    'images': images,
                    'dataSources': dataSources}
-                  )
+                  )"""
 
 """Method to update the articles depending on the category marked in the view:
     Input: Ajax @peticion of the view with the check marked.
@@ -156,7 +160,7 @@ def search_task(s_article, s_task):
 def search(request):
 
     print("entro en el seach")
-    search_query = request.POST.get('searchInput')
+    search_query = request.POST.get('my_form')
     print(search_query)
     list_task_serch = request.POST.getlist('list_task_search[]')
     print(list_task_serch)
