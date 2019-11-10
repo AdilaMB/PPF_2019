@@ -27,11 +27,14 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
 @requires_csrf_token
 def show_list(request):
     if request.method == 'POST':                                       # Check if the POST method comes from the search
+        print(request.POST.getlist('list_task_search[]'))
+        print(request.POST.getlist('list_cat_search[]'))
+        print("va a llamar al search")
         articles, tasks, categories, dataSources = search(request)
-        print(articles)
-        print(tasks)
-        print(categories)
-        print(dataSources)
+        #search_query = request.POST.get('my_form')
+        #list_task_serch = request.POST.getlist('list_task_search[]')
+        #lista_cat_buscar = request.POST.getlist('list_cat_search[]')
+
         #articles = r('articles')
         #tasks = search(request).get('list_task_serch')
         #categories = search(request).get('lista_cat_buscar')
@@ -40,13 +43,12 @@ def show_list(request):
 
     else:
         articles = Article.objects.all().order_by('published_date')     # Show all articles without having searched
-
+        dataSources = DataSource.objects.all()
+        categories = Category.objects.all()  # Save all categories for left menu
+        tasks = AnaliticTask.objects.all()  # Save all analytical tasks for left menu
 
 
     images = Image.objects.all().order_by('article')                    # Save all the images of the articles
-    dataSources = DataSource.objects.all()
-    categories = Category.objects.all()  # Save all categories for left menu
-    tasks = AnaliticTask.objects.all()  # Save all analytical tasks for left menu
     # Save all data sources for left menu
 
     return render(request, 'list/index_list.html',
@@ -153,9 +155,13 @@ def search_task(s_article, s_task):
 @requires_csrf_token
 def search(request):
 
-    search_query = request.POST.get('my_form')
+    print("entro en el seach")
+    search_query = request.POST.get('searchInput')
+    print(search_query)
     list_task_serch = request.POST.getlist('list_task_search[]')
+    print(list_task_serch)
     lista_cat_buscar = request.POST.getlist('list_cat_search[]')
+    print(lista_cat_buscar)
     dataSources = DataSource.objects.all()
     all_articles = []
 
@@ -172,15 +178,11 @@ def search(request):
                     if search_task(articles[x], list_task_serch[y]):                     #Auxiliary method that says if a task is in an article
                         all_articles.append(articles[x])
                         break
-
-    """data = {'articles': all_articles, 'list_task_serch':list_task_serch,
-            'lista_cat_buscar':lista_cat_buscar,
-            'dataSources': dataSources}
-    data = JSON.dumps(data)"""
-
-
-    #return HttpResponse(html), list_task_serch, lista_cat_buscar, dataSources
-    return  all_articles, list_task_serch, lista_cat_buscar, dataSources                                                      #Returns the found articles
+                for c in range(0, len(lista_cat_buscar)):
+                    if serach_category(articles[c], lista_cat_buscar):
+                        all_articles.append(articles[c])
+                        break
+    return all_articles, list_task_serch, lista_cat_buscar, dataSources
 
 
 """Method to visualize the details of the article

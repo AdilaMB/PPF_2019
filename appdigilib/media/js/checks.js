@@ -40,55 +40,10 @@ $(document).ready(function() {
 
 
     $('#searchbutton').click(function f() {
-        var my_form = $('#searchInput').val();
-        alert(my_form);
-         var lista_task_buscar = [];
-         $( '.check_task' ).each(
-             function( index ) {
-                  if(this.checked) {
-                      lista_task_buscar.push($(this).attr('name'));
-                      }
-                  else{} })
-        alert(lista_task_buscar);
-        var lista_cat_buscar = []
-        $( '.check_cat' ).each(function( index ) {
-            if(this.checked) {
-                lista_cat_buscar.push($(this).attr('name'));
-
-            }
-            else{
-                //lista_cat_des.push($(this).attr('name'));
-            }
-
-             })
-        alert(lista_cat_buscar);
-        $.ajax({
-            beforeSend: function(xhr, settings) {
-            var csrftoken = getCookie('csrftoken');
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          },
-            type:'POST',
-            url:'search/',
-            dataType:'html',
-            data: {
-                //'lista_c': lista_cat_des,
-                'list_task_search': lista_task_buscar,
-                'list_cat_search': lista_cat_buscar,
-                'my_form': my_form,
-            },
-
-            success: function(json){
-                $('#content1').html(json);
-            },
-            error: function(xhr, status, error) {
-                alert("error");
-            }
-        });
-
+        ajax_button_search();
     });
 
-
-    function getCookie(name) {
+function getCookie(name) {
 
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -121,15 +76,15 @@ async function ajax_post_tareas(){
         //var csrf;
         $.ajax({
             beforeSend: function(xhr, settings) {
-          var csrftoken = getCookie('csrftoken');
-          xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          },
-            type:'POST',
-            url:'index/c2',
-            dataType: 'html',
-            data: {
-              'lista': lista_task,
-              },
+            var csrftoken = getCookie('csrftoken');
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                },
+                type:'POST',
+                url:'index/c2',
+                dataType: 'html',
+                data: {
+                'lista': lista_task,
+                },
             success: function(json){
               $('#content1').html(json);
                 
@@ -177,7 +132,47 @@ async function ajax_post_categorias() {
 
     };
 
+async function ajax_button_search() {
+     var my_form = $('#searchInput').val();
+     alert(my_form);
+     var lista_task_buscar = [];
+     $( '.check_task' ).each(function( index ) {
+         if(this.checked) {
+             lista_task_buscar.push($(this).attr('name'));}
+         else{}
+     });
+     alert(lista_task_buscar);
+     var lista_cat_buscar = [];
+     $( '.check_cat' ).each(function( index ) {
+        if(this.checked) {
+            lista_cat_buscar.push($(this).attr('name')); }
+        else{//lista_cat_des.push($(this).attr('name'));
+            }
+     });
+     alert(lista_cat_buscar);
+     var datos = {
+         'list_task_search': lista_task_buscar,
+         'list_cat_search': lista_cat_buscar,
+     }
+     $.ajax({
+         type:'POST',
+         url:'',
+         dataType:'html',
+         data: datos,
+         beforeSend: function(xhr, settings) {
+                    var csrftoken = getCookie('csrftoken');
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
 
+                    },
+         success: function(json){
+             $('#content1').html(json);
+         },
+         error: function(xhr, status, error) {
+             alert("error");
+         }
+        });
+
+};
 
 //Auxiliary Function to test button
 function enviar() {

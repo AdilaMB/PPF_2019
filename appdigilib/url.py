@@ -17,7 +17,7 @@ urlpatterns = [
     path('Imagem/nova', views.add_image, name ='nova_img'),
     path('index/c1', views.update_article_category, name ='list_cat'),
     path('index/c2', views.update_article_task, name ='list_task'),
-    path('search/', views.search, name ='buscar'),
+    #path('search/', views.search, name ='buscar'),
     path('detail/', views.details, name ='detail'),
 
     #path('heatmap/', views.heatmap, name ='manager'),
