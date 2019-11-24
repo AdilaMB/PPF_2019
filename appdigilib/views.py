@@ -17,7 +17,7 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
     Check which items are to be shown depending on the selections made in the view
     Returns: @list of articles
 """
-@requires_csrf_token
+#@requires_csrf_token
 def show_list(request):
 
     images = Image.objects.all().order_by('article')                            # Save all the images of the articles
@@ -58,7 +58,7 @@ def show_list(request):
     remove it from the list of items to display.
     Returns: The list of items to be displayed
 """
-@requires_csrf_token
+#@requires_csrf_token
 def update_article_category(request):
 
     if request.method == 'POST':                                                            #I check if the request is safe
@@ -88,7 +88,7 @@ def update_article_category(request):
     remove it from the list of items to display
     Return: The list of items to be displayed
 """
-@requires_csrf_token
+#@requires_csrf_token
 def update_article_task(request):
 
     if request.method == 'POST':                                                            #I check if the request is safe
@@ -145,7 +145,7 @@ def search_task(s_article, s_task):
     Input: @text
     Returns: @ List of articles that contain the text in the Title or Author
 """
-@requires_csrf_token
+#@requires_csrf_token
 def search(request):
 
     search_query = request.POST.get('my_form')

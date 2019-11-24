@@ -16,10 +16,10 @@ $(document).ready(function() {
         var modal = $(this);
 
         $.ajax({
-            beforeSend: function (xhr, settings) {
+            /*beforeSend: function (xhr, settings) {
                 var csrftoken = getCookie('csrftoken');
                 xhr.setRequestHeader("X-CSRFToken", csrftoken);
-            },
+            },*/
             type: 'POST',
             url: 'detail/',
             dataType: 'html',
@@ -75,10 +75,10 @@ async function ajax_post_tareas(){
         });
         //var csrf;
         $.ajax({
-            beforeSend: function(xhr, settings) {
+            /*beforeSend: function(xhr, settings) {
             var csrftoken = getCookie('csrftoken');
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
-                },
+                },*/
                 type:'POST',
                 url:'index/c2',
                 dataType: 'html',
@@ -87,7 +87,6 @@ async function ajax_post_tareas(){
                 },
             success: function(json){
               $('#content1').html(json);
-                
             },
             error: function(xhr, status, error) {
                 alert("error");
@@ -97,7 +96,6 @@ async function ajax_post_tareas(){
 
 async function ajax_post_categorias() {
     var list_marcados = [];
-
         $( '.check_cat' ).each(function( index ) {
             if(this.checked) {
                 list_marcados.push($(this).attr('name'));
@@ -110,17 +108,15 @@ async function ajax_post_categorias() {
         });
         //var csrf;
         $.ajax({
-            beforeSend: function(xhr, settings) {
+            /*beforeSend: function(xhr, settings) {
             var csrftoken = getCookie('csrftoken');
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          },
+          },*/
             type:'POST',
             url:'index/c1',
             dataType:'html',
             data: {
-                //'lista_c': lista_cat_des,
                 'lista': list_marcados,
-
             },
             success: function(json){
                 $('#content1').html(json);
@@ -133,8 +129,7 @@ async function ajax_post_categorias() {
     };
 
 async function ajax_button_search() {
-     var my_form = $('#searchInput').val();
-     $('#searchInput').val('');
+    let my_form = $('#searchInput').val();
 
      var lista_task_buscar = [];
      $( '.check_task' ).each(function( index ) {
@@ -154,17 +149,17 @@ async function ajax_button_search() {
          'list_task_search': lista_task_buscar,
          'list_cat_search': lista_cat_buscar,
          'my_form': my_form,
-     }
+     };
      $.ajax({
          type:'POST',
          url:'',
          dataType:'html',
          data: datos,
-         beforeSend: function(xhr, settings) {
+         /*beforeSend: function(xhr, settings) {
                     var csrftoken = getCookie('csrftoken');
                     xhr.setRequestHeader("X-CSRFToken", csrftoken);
 
-                    },
+                    },*/
          success: function(json){
              $('#content1').html(json);
          },
