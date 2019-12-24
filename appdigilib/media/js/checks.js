@@ -16,10 +16,10 @@ $(document).ready(function() {
         var modal = $(this);
 
         $.ajax({
-            /*beforeSend: function (xhr, settings) {
+            beforeSend: function (xhr, settings) {
                 var csrftoken = getCookie('csrftoken');
                 xhr.setRequestHeader("X-CSRFToken", csrftoken);
-            },*/
+            },
             type: 'POST',
             url: 'detail/',
             dataType: 'html',
@@ -75,10 +75,10 @@ async function ajax_post_tareas(){
         });
         //var csrf;
         $.ajax({
-            /*beforeSend: function(xhr, settings) {
+            beforeSend: function(xhr, settings) {
             var csrftoken = getCookie('csrftoken');
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
-                },*/
+                },
                 type:'POST',
                 url:'index/c2',
                 dataType: 'html',
@@ -108,10 +108,10 @@ async function ajax_post_categorias() {
         });
         //var csrf;
         $.ajax({
-            /*beforeSend: function(xhr, settings) {
+            beforeSend: function(xhr, settings) {
             var csrftoken = getCookie('csrftoken');
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          },*/
+          },
             type:'POST',
             url:'index/c1',
             dataType:'html',
@@ -155,11 +155,11 @@ async function ajax_button_search() {
          url:'',
          dataType:'html',
          data: datos,
-         /*beforeSend: function(xhr, settings) {
+         beforeSend: function(xhr, settings) {
                     var csrftoken = getCookie('csrftoken');
                     xhr.setRequestHeader("X-CSRFToken", csrftoken);
 
-                    },*/
+                    },
          success: function(json){
              $('#content1').html(json);
          },

@@ -17,7 +17,7 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
     Check which items are to be shown depending on the selections made in the view
     Returns: @list of articles
 """
-#@requires_csrf_token
+@requires_csrf_token
 def show_list(request):
 
     images = Image.objects.all().order_by('article')                            # Save all the images of the articles
