@@ -2,15 +2,20 @@
 {% load static %}
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <!-- Bootstrap CSS
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
-    <link rel="stylesheet" href="/appdigilib/media/css/style.css">
-
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="/appdigilib/media/css/style.css" />
 
     <!--My personalizaded CSS-->
     <!--<link rel="stylesheet" href="{% static 'css/style1.css' %}">-->
@@ -18,119 +23,387 @@
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
     <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="/appdigilib/media/js/checks.js"></script>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/appdigilib/media/assets/img/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/jasny-bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/jasny-bootstrap.min.css"
+      type="text/css"
+    />
+    <!-- Material CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/material-kit.css"
+      type="text/css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <!-- Line Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/fonts/line-icons/line-icons.css"
+      type="text/css"
+    />
+    <!-- Line Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/fonts/line-icons/line-icons.css"
+      type="text/css"
+    />
+    <!-- Main Styles -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/main.css"
+      type="text/css"
+    />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/extras/animate.css"
+      type="text/css"
+    />
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/extras/owl.carousel.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/extras/owl.theme.css"
+      type="text/css"
+    />
+    <!-- Responsive CSS Styles -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/responsive.css"
+      type="text/css"
+    />
+    <!-- Slicknav js -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/slicknav.css"
+      type="text/css"
+    />
+    <!-- Bootstrap Select -->
+    <link
+      rel="stylesheet"
+      href="/appdigilib/media/assets/css/bootstrap-select.min.css"
+    />
+
     <title>Library</title>
-
-</head>
-<body>
-
-    <!--Top Menu   onclick="{{ buscar }}" -->
-    <div class="jumbotron">
-        <div class="container text-center">
-             <h1>Digital Library</h1>
-             <p>A Visual Survey of Text Mining Visualization for Requirement Engineering</p>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <div class="header">
+      <!-- Off Canvas Navigation -->
+      <div
+        class="navmenu navmenu-default navmenu-fixed-left offcanvas"
+        style="left: 0px; right: 2000px;width: 100%;margin-top: 225px;"
+      >
+        <!--- Off Canvas Side Menu -->
+        <div class="close" data-toggle="offcanvas" data-target=".navmenu">
+          <i class="fa fa-close"></i>
         </div>
-        <!--<a type="" href="{% url 'nova_img' %}">Imagen</a>  data-toggle="modal" data-target="#Modal" id="searchbutton" onclick="ajax_button_search()"-->
-        <div class="container text-center" width="100%" placeholder="col-xs-1">
-            <form method="POST" class="form-inline center" id="SearchForm">
-                {% csrf_token %}
-                <input type="text" name="searchInput" id="searchInput" class="form-control search-group-continer" size="100%" aling placeholder="Text in the title or author's name" align="center">
-                <button type="button" class="btn btn-primary" value ="Search" id="searchbutton"> Search</button>
-            </form>
-        </div>
-    </div>
-
-
-
-<!--Left Menu-->
-    <div class="container">
-        <div class="col-md-2">
-            <div class="row" align="left" position= 'fixed'>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Analytic Tasks</li>
-                        {% if tasks %}
-                            {% for task in tasks %}
-                                <label>
-                                    <input class="check_task" type="checkbox" name="{{task.task}}" aria-label="Checkbox for following text input" aria-valuetext="Source" id="{{task.task}}" checked>
-                                    {{task.task}}
-                                </label>
-
-                            {% endfor %}
-                        {% else %}
-                            <h3>There is not task to show</h3>
-                        {% endif %}
-                    <li class="list-group-item">Visualization Categories</li>
-                        {% if categories %}
-                            {% for category in categories %}
-                                <label>
-                                   <input class="check_cat" type="checkbox" name="{{category.category}}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{category.category}}">
-                                   {{category.category}}
-                                </label>
-                            {% endfor%}
-                        {% else %}
-                            <h3>There is not category to show</h3>
-                        {% endif %}
-
-                <!--    <li class="list-group-item">Data Source</li>
-                        {% if dataSources %}
-                            {% for dataSource in dataSources %}
-                                <label>
-                                   <input class="check_data" type="checkbox" name="{{ dataSource }}" aria-label="Checkbox for following text input" aria-valuetext="Source" checked id="{{ dataSource.data }}">
-                                   {{ dataSource.data }}
-                                </label>
-                            {% endfor%}
-                        {% else %}
-                            <h3>There is not data source to show</h3>
-                        {% endif %}
-                 -->
-                     </ul>
-
-                <!--<li><a href=""> WordCloud </a></li>
-                <li><a href=""> HeatMap </a></li>
-                <li><a href=""> Plot </a></li>
--->
-
-                </nav>
-           </div>
-        </div>
-        <div class="col-md-9">
-            <div class="row" align="left" id="content1">
-                {% block content%}
-
-                {% endblock %}
+        <h3 class="title-menu">Manage visualization</h3>
+        <div class="main-container">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6" style="margin-top: 30px;">
+                  <div class="widget-title">
+                    <h5>Actions</h5>
+                  </div>
+                  <label class="custom-file">
+                    <input type="file" id="file" class="custom-file-input" />
+                    <span class="custom-file-control"></span>
+                  </label>
+                  <div class="widget-title">
+                    <h5>Data Source</h5>
+                  </div>
+                  <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          Numeric
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          Categoric
+                        </label>
+                      </div>
+                  </label>
+                  <div class="widget-title">
+                    <h5>Visualization</h5>
+                  </div>
+                  <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                </div>
+              <div class="col-sm-6">
+                    <div class="bd-callout bd-callout-warning">
+                            <h4 id="conveying-meaning-to-assistive-technologies">Brief description of the steps to create the visualization</h4>
+                            
+                            <p>1. Load file<br>
+                               2. Select data source<br>
+                               3. Select visualization type</p>
+                            </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div><br>
+        <!--- End Menu -->
+      </div>
+      <!--- End Off Canvas Side Menu -->
+      <div
+        class="tbtn wow pulse"
+        id="menu"
+        data-wow-iteration="infinite"
+        data-wow-duration="500ms"
+        data-toggle="offcanvas"
+        data-target=".navmenu"
+      >
+        <p><i class="fa fa-file-text-o"></i>Manage visualization</p>
+      </div>
+    </div>
+    <!-- Header Section End -->
 
+    <!-- Start intro section -->
+    <section id="intro" class="section-intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="main-text">
+            <h1 class="intro-title">
+              <span style="color: #3498DB"><b>Digital Library</b></span>
+            </h1>
+            <p class="sub-title">
+              A Visual Survey of Text Mining Visualization for Requirement
+              Engineering
+            </p>
+
+            <!-- Start Search box -->
+            <div class="row search-bar">
+              <div class="advanced-search">
+                <form class="search-form" method="POST" action="/" id="SearchForm">
+                {% csrf_token %}
+                  <div class="col-md-10 col-sm-6 search-col">
+                    <input
+                      class="form-control keyword"
+                      name="search"
+                      value=""
+                      placeholder="Text in the title or author's name"
+                      type="text"
+                      id ="searchInput"
+                    />
+                    <i class="fa fa-search"></i>
+                  </div>
+                  <div class="col-md-2 col-sm-6 search-col">
+                    <button
+                      class="btn btn-common btn-search btn-block"
+                      type="button"
+                      id="searchbutton"
+                    >
+                      <strong>Search</strong>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- End Search box -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end intro section -->
+
+    <div class="wrapper">
+      <!-- Main container Start -->
+      <div class="main-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9" style="margin-top: -30px;">
+              <div class="ad-detail-content" id="content1">
+                {% block content%} {% endblock %}
+              </div>
+            </div>
+            <div class="col-sm-3 page-sidebar">
+              <aside>
+                <div class="inner-box">
+                  <div class="categories">
+                    <div class="widget-title">
+                      <h5>Analytic Tasks</h5>
+                    </div>
+                    <div class="categories-list">
+                      <ul>
+                        {% if tasks %} {% for task in tasks %}
+                        <li>
+                          <label class="switchBtn">
+                            <input class="check_task" type="checkbox" id="{{task.task}}" name="{{task.task}}" aria-label="Checkbox for following text input"
+                            aria-valuetext="Source" checked>
+                            <div class="slide round">{{task.task}}</div>
+                          </label>
+                        </li>
+                        {% endfor %} {% else %}
+                        <h1>There is not task to show</h1>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-box">
+                  <div class="widget-title">
+                    <h5>Visualization Categories</h5>
+                  </div>
+                  <div class="categories-list">
+                    <ul>
+                      {% if categories %} {% for category in categories %}
+                      <li>
+                        <label class="switchBtn">
+                          <input class="check_cat" type="checkbox" id="{{category.category}}" name="{{category.category}}" aria-label="Checkbox for following text input"
+                          aria-valuetext="Source" checked>
+                          <div class="slide round">{{category.category}}</div>
+                        </label>
+                      </li>
+                      {% endfor%} {% else %}
+                      <h1>There is not category to show</h1>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main container End -->
+    </div>
 
     <!-- Modal -->
-<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Details of the paper</h4>
-      </div>
-      <div class="modal-body">
-        {{ title }}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <div
+      class="modal fade"
+      id="Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-hidden="true"
+            >
+              ×
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Details of the paper</h4>
+          </div>
+          <div class="modal-body">
+            {{ title }}
+          </div>
+          <div class="modal-footer" style="padding-bottom: 20px;"></div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- End Modal -->
-</body>
+    <!-- End Modal -->
 
-
-    <footer class="container-fluid text-center">
-
-        <p align="center">Copyright  E.R. PUC-RIO 2019</p>
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Copyright Start  -->
+      <div id="copyright">
+        <div class="container-copy">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info pull-left">
+                <p>Copyright E.R. PUC-RIO 2019</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright End -->
     </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Main JS  -->
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/jquery-min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/material.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/material-kit.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/jquery.parallax.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/owl.carousel.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/wow.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/main.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/jquery.counterup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/appdigilib/media/assets/js/jasny-bootstrap.min.js"
+    ></script>
+    <script src="/appdigilib/media/assets/js/bootstrap-select.min.js"></script>
+  </body>
 </html>
