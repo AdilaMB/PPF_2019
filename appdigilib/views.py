@@ -5,7 +5,7 @@ Manager for the articles.
 """
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
-from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.csrf import requires_csrf_token, ensure_csrf_cookie
 from django.http import HttpResponse
 from appdigilib.forms import *
 from django.db.models import Q
@@ -18,6 +18,7 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
     Returns: @list of articles
 """
 @requires_csrf_token
+@ensure_csrf_cookie
 def show_list(request):
 
     images = Image.objects.all().order_by('article')                            # Save all the images of the articles
@@ -145,7 +146,6 @@ def search_task(s_article, s_task):
     Input: @text
     Returns: @ List of articles that contain the text in the Title or Author
 """
-#@requires_csrf_token
 def search(request):
 
     search_query = request.POST.get('my_form')
