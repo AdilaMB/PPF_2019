@@ -154,27 +154,41 @@ def search(request):
     dataSources = DataSource.objects.all()
     all_articles = []
 
+    #If the request is Post
     if search_query:
         articles = list(Article.objects.filter(                         # Query to search by title and author
             Q(title__contains= search_query) |
             Q(author__contains =search_query)))
 
-        if articles:                                                    #Search in the articles of the query if they have the task marked
+        #If has more than 1 article, complexity O(nxn)
+        if len(articles)>1:                                                    #Search in the articles of the query if they have the task marked
             for x in range(0, (len(articles)-1)):
-                print(articles[x])
-                for y in range(0, len(list_task_serch)):
-                    print(list_task_serch[y])
+                for y in range(0, (len(list_task_serch)-1)):
+
                     if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
                         all_articles.append(articles[x])
                         articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
+                        x = x -1
                         break
-        if articles:                                                    #The remaining items, see if they have the category marked
-            for x in range(0, len(articles)):
-                for z in range(0, len(lista_cat_buscar)):
-                    print(lista_cat_buscar[z])
-                    if serach_category(articles[x], lista_cat_buscar[z]):
-                        all_articles.append(articles[x])
+        #Decrease complexity O(n)
+        else:
+            for z in range(0,(len(list_task_serch)-1)):
+                if search_task(articles,list_task_serch[z]):
+                    all_articles.append(articles)
+                    break
+
+        if len(articles)>1:                                                    #The remaining items, see if they have the category marked
+            for w in range(0, (len(articles)-1)):
+                for r in range(0, (len(lista_cat_buscar)-1)):
+
+                    if serach_category(articles[w], lista_cat_buscar[r]):
+                        all_articles.append(articles[w])
                         break
+        else:
+            for z in range(0, (len(lista_cat_buscar) - 1)):
+                if serach_category(articles, lista_cat_buscar[z]):
+                    all_articles.append(articles)
+                    break
 
     return all_articles, list_task_serch, lista_cat_buscar, dataSources
 

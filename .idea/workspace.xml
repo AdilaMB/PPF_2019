@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appdigilib/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualizador/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualizador/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,25 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualizador/settings.py">
+      <file leaf-file-name="checks.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state relative-caret-position="391">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checks.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
+      <file leaf-file-name="url.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appdigilib/url.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="141" column="19" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="19" />
-              <folding>
-                <element signature="e#250#945#0" />
-                <element signature="e#1630#2454#0" />
-                <element signature="e#2495#3363#0" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -51,38 +47,46 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="229" column="34" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="34" />
+            <state relative-caret-position="332">
+              <caret line="267" column="52" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global_settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/conf/global_settings.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appdigilib/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-291">
-              <caret line="540" column="22" lean-forward="true" selection-start-line="540" selection-start-column="22" selection-end-line="540" selection-end-column="22" />
+            <state relative-caret-position="867">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="152" column="64" lean-forward="true" selection-start-line="152" selection-start-column="64" selection-end-line="152" selection-end-column="64" />
+            <state relative-caret-position="159">
+              <caret line="172" column="28" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
               <folding>
-                <element signature="e#0#68#1" />
-                <element signature="e#69#114#0" expanded="true" />
-                <element signature="e#2876#3192#1" />
-                <element signature="e#3258#4426#0" />
-                <element signature="e#4429#4760#1" />
-                <element signature="e#4822#5962#0" />
-                <element signature="e#5965#6143#1" />
-                <element signature="e#6193#6513#0" />
-                <element signature="e#6516#6696#1" />
-                <element signature="e#6738#7025#0" />
-                <element signature="e#7028#7205#1" />
+                <element signature="e#430#603#1" />
+                <element signature="e#674#2914#0" />
+                <element signature="e#2916#3232#1" />
+                <element signature="e#3298#4466#0" />
+                <element signature="e#4469#4800#1" />
+                <element signature="e#4862#6002#0" />
+                <element signature="e#6005#6183#1" />
+                <element signature="e#6233#6553#0" />
+                <element signature="e#6556#6736#1" />
+                <element signature="e#6778#7065#0" />
+                <element signature="e#7068#7245#1" />
+                <element signature="e#7888#8381#0" />
+                <element signature="e#8422#8590#0" />
+                <element signature="e#8719#8980#0" />
+                <element signature="e#9046#9224#0" />
+                <element signature="e#8854#9002#1" />
+                <element signature="e#9029#10252#0" />
+                <element signature="e#10338#11135#0" />
+                <element signature="e#11213#11255#0" />
               </folding>
             </state>
           </provider>
@@ -113,6 +117,8 @@
       <find>//</find>
       <find>cop</find>
       <find>footer</find>
+      <find>con</find>
+      <find>content1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,14 +136,14 @@
         <option value="$PROJECT_DIR$/appdigilib/templates/list/index_list.html" />
         <option value="$PROJECT_DIR$/appdigilib/models.py" />
         <option value="$PROJECT_DIR$/appdigilib/templates/list/modal.html" />
-        <option value="$PROJECT_DIR$/appdigilib/media/js/checks.js" />
-        <option value="$PROJECT_DIR$/appdigilib/templates/list/index.html" />
         <option value="$PROJECT_DIR$/appdigilib/media/assets/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/appdigilib/media/assets/css/main.css" />
         <option value="$PROJECT_DIR$/../venv/Lib/site-packages/django/contrib/admin/templates/admin/base_site.html" />
         <option value="$PROJECT_DIR$/../venv/Lib/site-packages/django/contrib/admin/templates/admin/login.html" />
-        <option value="$PROJECT_DIR$/visualizador/settings.py" />
         <option value="$PROJECT_DIR$/../venv/Lib/site-packages/django/conf/global_settings.py" />
+        <option value="$PROJECT_DIR$/appdigilib/templates/list/index.html" />
+        <option value="$PROJECT_DIR$/visualizador/settings.py" />
+        <option value="$PROJECT_DIR$/appdigilib/media/js/checks.js" />
         <option value="$PROJECT_DIR$/appdigilib/views.py" />
       </list>
     </option>
@@ -192,78 +198,7 @@
             <path>
               <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
               <item name="visualizador" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="django" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Training) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Lib" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="Django-2.2.7.dist-info" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -435,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577929086388</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update CSRF">
+      <created>1578149223286</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578149223286</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -449,6 +391,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -457,8 +400,8 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49848714" weight="0.32427844" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3293718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3293718" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.3820034" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.40015128" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.23429541" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.24659607" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
@@ -542,7 +485,8 @@
     <MESSAGE value="Without CSRF_token" />
     <MESSAGE value="With CSRF_token" />
     <MESSAGE value="Update CSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update CSS" />
+    <MESSAGE value="Update CSRF" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CSRF" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -550,27 +494,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/mg_visualization.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/view_aux/text_mining.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -583,17 +506,25 @@
         <state relative-caret-position="3825">
           <caret line="242" column="18" lean-forward="true" selection-start-line="242" selection-start-column="18" selection-end-line="242" selection-end-column="18" />
           <folding>
-            <element signature="e#0#68#1" />
-            <element signature="e#69#114#0" expanded="true" />
-            <element signature="e#2876#3192#1" />
-            <element signature="e#3258#4426#0" />
-            <element signature="e#4429#4760#1" />
-            <element signature="e#4822#5962#0" />
-            <element signature="e#5965#6143#1" />
-            <element signature="e#6193#6513#0" />
-            <element signature="e#6516#6696#1" />
-            <element signature="e#6738#7025#0" />
-            <element signature="e#7028#7205#1" />
+            <element signature="e#430#603#1" />
+            <element signature="e#674#2914#0" />
+            <element signature="e#2916#3232#1" />
+            <element signature="e#3298#4466#0" />
+            <element signature="e#4469#4800#1" />
+            <element signature="e#4862#6002#0" />
+            <element signature="e#6005#6183#1" />
+            <element signature="e#6233#6553#0" />
+            <element signature="e#6556#6736#1" />
+            <element signature="e#6778#7065#0" />
+            <element signature="e#7068#7245#1" />
+            <element signature="e#7888#8381#0" />
+            <element signature="e#8422#8590#0" />
+            <element signature="e#8719#8980#0" />
+            <element signature="e#9046#9224#0" />
+            <element signature="e#8854#9002#1" />
+            <element signature="e#9029#10252#0" />
+            <element signature="e#10338#11135#0" />
+            <element signature="e#11213#11255#0" />
           </folding>
         </state>
       </provider>
@@ -644,24 +575,8 @@
         <state relative-caret-position="-918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#206#1021#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/categoria.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -697,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/media/assets/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -730,11 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/apps/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/bin/django-admin.py">
@@ -746,13 +650,6 @@
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/contrib/admin/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -760,13 +657,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/contrib/admin/sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/contrib/admin/templates/admin/change_list.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -808,66 +699,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <folding>
+            <element signature="e#206#1021#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
+    <entry file="file://$PROJECT_DIR$/appdigilib/apps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="141" column="19" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="19" />
-          <folding>
-            <element signature="e#250#945#0" />
-            <element signature="e#1630#2454#0" />
-            <element signature="e#2495#3363#0" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/bin/django-admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="229" column="34" selection-start-line="229" selection-start-column="28" selection-end-line="229" selection-end-column="34" />
+        <state relative-caret-position="867">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/conf/global_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7650" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/utils/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visualizador/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="152" column="64" lean-forward="true" selection-start-line="152" selection-start-column="64" selection-end-line="152" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#68#1" />
-            <element signature="e#69#114#0" expanded="true" />
-            <element signature="e#2876#3192#1" />
-            <element signature="e#3258#4426#0" />
-            <element signature="e#4429#4760#1" />
-            <element signature="e#4822#5962#0" />
-            <element signature="e#5965#6143#1" />
-            <element signature="e#6193#6513#0" />
-            <element signature="e#6516#6696#1" />
-            <element signature="e#6738#7025#0" />
-            <element signature="e#7028#7205#1" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../venv/Lib/site-packages/django/conf/global_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="540" column="22" lean-forward="true" selection-start-line="540" selection-start-column="22" selection-end-line="540" selection-end-column="22" />
+        <state relative-caret-position="17">
+          <caret line="562" column="42" selection-start-line="562" selection-start-column="42" selection-end-line="562" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="267" column="52" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="172" column="28" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
+          <folding>
+            <element signature="e#430#603#1" />
+            <element signature="e#674#2914#0" />
+            <element signature="e#2916#3232#1" />
+            <element signature="e#3298#4466#0" />
+            <element signature="e#4469#4800#1" />
+            <element signature="e#4862#6002#0" />
+            <element signature="e#6005#6183#1" />
+            <element signature="e#6233#6553#0" />
+            <element signature="e#6556#6736#1" />
+            <element signature="e#6778#7065#0" />
+            <element signature="e#7068#7245#1" />
+            <element signature="e#7888#8381#0" />
+            <element signature="e#8422#8590#0" />
+            <element signature="e#8719#8980#0" />
+            <element signature="e#9046#9224#0" />
+            <element signature="e#8854#9002#1" />
+            <element signature="e#9029#10252#0" />
+            <element signature="e#10338#11135#0" />
+            <element signature="e#11213#11255#0" />
+          </folding>
         </state>
       </provider>
     </entry>
