@@ -121,7 +121,6 @@ def serach_category(s_article, s_category):
 
     list_cat_art = list(s_article.categories.all())             #All categories of the article that comes as an entry
 
-
     for c in range(0, len(list_cat_art)):                      #Search if the entry category exists in the article
         if list_cat_art[c].category == s_category:
           return True
@@ -153,6 +152,7 @@ def search(request):
     lista_cat_buscar = request.POST.getlist('list_cat_search[]')
     dataSources = DataSource.objects.all()
     all_articles = []
+    articles = list(Article.objects.all())
 
     #If the request is Post
     if search_query:
@@ -160,34 +160,31 @@ def search(request):
             Q(title__contains= search_query) |
             Q(author__contains =search_query)))
 
-        #If has more than 1 article, complexity O(nxn)
-        if len(articles)>1:                                                    #Search in the articles of the query if they have the task marked
-            for x in range(0, (len(articles)-1)):
-                for y in range(0, (len(list_task_serch)-1)):
-
-                    if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
-                        all_articles.append(articles[x])
-                        articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
-                        x = x -1
-                        break
-        #Decrease complexity O(n)
-        else:
-            for z in range(0,(len(list_task_serch)-1)):
-                if search_task(articles,list_task_serch[z]):
-                    all_articles.append(articles)
+    if len(articles) > 1:
+        x=0                                               #Search in the articles of the query if they have the task marked
+        while x < len(articles):
+            for y in range(0, (len(list_task_serch)-1)):
+                if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
+                    all_articles.append(articles[x])
+                    articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
+                    x +=1
                     break
+                x +=1
+    # Decrease complexity O(n)
+    else:
+        for z in range(0, (len(list_task_serch)-1)):
+            if search_task(articles[0], list_task_serch[z]):
+                all_articles.append(articles[0])
+                articles.remove(articles[0])
+                break
 
-        if len(articles)>1:                                                    #The remaining items, see if they have the category marked
-            for w in range(0, (len(articles)-1)):
-                for r in range(0, (len(lista_cat_buscar)-1)):
-
-                    if serach_category(articles[w], lista_cat_buscar[r]):
-                        all_articles.append(articles[w])
-                        break
-        else:
-            for z in range(0, (len(lista_cat_buscar) - 1)):
-                if serach_category(articles, lista_cat_buscar[z]):
-                    all_articles.append(articles)
+    if len(articles) > 0:
+        w =0                                               #The remaining items, see if they have the category marked
+        while w < len(articles):
+            for r in range(0, (len(lista_cat_buscar)-1)):
+                if serach_category(articles[w], lista_cat_buscar[r]):
+                    all_articles.append(articles[w])
+                    w+=1
                     break
 
     return all_articles, list_task_serch, lista_cat_buscar, dataSources

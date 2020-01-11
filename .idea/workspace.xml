@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appdigilib/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +26,11 @@
       <file leaf-file-name="checks.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#3402#4472#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,7 +47,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="4539">
               <caret line="267" column="52" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="52" />
             </state>
           </provider>
@@ -56,8 +56,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appdigilib/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="34" />
+            <state relative-caret-position="-174">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -65,11 +65,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="172" column="28" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
+            <state relative-caret-position="-72">
+              <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="4" />
               <folding>
                 <element signature="e#430#603#1" />
                 <element signature="e#674#2914#0" />
+                <element signature="e#2501#2914#1" />
                 <element signature="e#2916#3232#1" />
                 <element signature="e#3298#4466#0" />
                 <element signature="e#4469#4800#1" />
@@ -79,14 +80,11 @@
                 <element signature="e#6556#6736#1" />
                 <element signature="e#6778#7065#0" />
                 <element signature="e#7068#7245#1" />
-                <element signature="e#7888#8381#0" />
-                <element signature="e#8422#8590#0" />
-                <element signature="e#8719#8980#0" />
-                <element signature="e#9046#9224#0" />
-                <element signature="e#8854#9002#1" />
-                <element signature="e#9029#10252#0" />
-                <element signature="e#10338#11135#0" />
-                <element signature="e#11213#11255#0" />
+                <element signature="e#7611#7807#0" />
+                <element signature="e#9567#9715#1" />
+                <element signature="e#9742#10965#0" />
+                <element signature="e#11051#11848#0" />
+                <element signature="e#12049#12071#0" />
               </folding>
             </state>
           </provider>
@@ -181,24 +179,6 @@
               <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
               <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="appdigilib" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PPF_2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PPF_2019" type="462c0819:PsiDirectoryNode" />
-              <item name="visualizador" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -391,7 +371,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
       <window_info anchor="bottom" id="Messages" order="7" />
@@ -400,46 +379,60 @@
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49848714" weight="0.32427844" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3293718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3293718" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.23429541" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.24659607" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.29032257" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.25037822" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39898133" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39898133" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.24659607" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.23429541" />
+      <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49848714" weight="0.32427844" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293718" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293718" />
+      <window_info id="Structure" order="1" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" side_tool="true" weight="0.2708018" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.3293718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293718" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3293718" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.21785174" />
       <window_info id="Structure" order="1" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293718" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3293718" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3293718" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39898133" />
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" side_tool="true" weight="0.2708018" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4312394" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3293718" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" sideWeight="0.5012658" side_tool="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3293718" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +483,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/appdigilib/views.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -508,6 +508,7 @@
           <folding>
             <element signature="e#430#603#1" />
             <element signature="e#674#2914#0" />
+            <element signature="e#2501#2914#1" />
             <element signature="e#2916#3232#1" />
             <element signature="e#3298#4466#0" />
             <element signature="e#4469#4800#1" />
@@ -517,14 +518,11 @@
             <element signature="e#6556#6736#1" />
             <element signature="e#6778#7065#0" />
             <element signature="e#7068#7245#1" />
-            <element signature="e#7888#8381#0" />
-            <element signature="e#8422#8590#0" />
-            <element signature="e#8719#8980#0" />
-            <element signature="e#9046#9224#0" />
-            <element signature="e#8854#9002#1" />
-            <element signature="e#9029#10252#0" />
-            <element signature="e#10338#11135#0" />
-            <element signature="e#11213#11255#0" />
+            <element signature="e#7611#7807#0" />
+            <element signature="e#9567#9715#1" />
+            <element signature="e#9742#10965#0" />
+            <element signature="e#11051#11848#0" />
+            <element signature="e#12049#12071#0" />
           </folding>
         </state>
       </provider>
@@ -727,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="34" />
+        <state relative-caret-position="-174">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -760,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/templates/list/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="4539">
           <caret line="267" column="52" selection-start-line="267" selection-start-column="42" selection-end-line="267" selection-end-column="52" />
         </state>
       </provider>
@@ -774,18 +772,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/media/js/checks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#3402#4472#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appdigilib/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="172" column="28" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="28" />
+        <state relative-caret-position="-72">
+          <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="4" />
           <folding>
             <element signature="e#430#603#1" />
             <element signature="e#674#2914#0" />
+            <element signature="e#2501#2914#1" />
             <element signature="e#2916#3232#1" />
             <element signature="e#3298#4466#0" />
             <element signature="e#4469#4800#1" />
@@ -795,14 +797,11 @@
             <element signature="e#6556#6736#1" />
             <element signature="e#6778#7065#0" />
             <element signature="e#7068#7245#1" />
-            <element signature="e#7888#8381#0" />
-            <element signature="e#8422#8590#0" />
-            <element signature="e#8719#8980#0" />
-            <element signature="e#9046#9224#0" />
-            <element signature="e#8854#9002#1" />
-            <element signature="e#9029#10252#0" />
-            <element signature="e#10338#11135#0" />
-            <element signature="e#11213#11255#0" />
+            <element signature="e#7611#7807#0" />
+            <element signature="e#9567#9715#1" />
+            <element signature="e#9742#10965#0" />
+            <element signature="e#11051#11848#0" />
+            <element signature="e#12049#12071#0" />
           </folding>
         </state>
       </provider>
