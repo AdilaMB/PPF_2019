@@ -22,21 +22,24 @@ from appdigilib.models import Article, Category, AnaliticTask, Image, DataSource
 def show_list(request):
 
     images = Image.objects.all().order_by('article')                            # Save all the images of the articles
-    if request.method == 'POST':                                                # Check if the POST method comes from the search
-        articles, tasks, categories, dataSources = search(request)              #Search articles by selected categories and tasks
-        html = render_to_string('list/render.html', {'articles': articles,
+    try:
+        if request.method == 'POST':
+        # Check if the POST method comes from the search
+            articles, tasks, categories, dataSources = search(request)              #Search articles by selected categories and tasks
+            html = render_to_string('list/render.html', {'articles': articles,
                                                      'categories': categories,  # load all the data from the left menu
                                                      'tasks': tasks,
                                                      'images': images,
                                                      'dataSources': dataSources
                                                      })
 
-    else:
-        articles = Article.objects.all().order_by('published_date')             # Show all articles without having searched
-        dataSources = DataSource.objects.all()
-        categories = Category.objects.all()                                     # Save all categories for left menu
-        tasks = AnaliticTask.objects.all()                                      # Save all analytical tasks for left menu
-        html = render_to_string('list/index_list.html',{'articles': articles,                                # List the items in the main interface
+
+        else:
+            articles = Article.objects.all().order_by('published_date')             # Show all articles without having searched
+            dataSources = DataSource.objects.all()
+            categories = Category.objects.all()                                     # Save all categories for left menu
+            tasks = AnaliticTask.objects.all()                                      # Save all analytical tasks for left menu
+            html = render_to_string('list/index_list.html',{'articles': articles,                                # List the items in the main interface
                                                         'categories': categories,                            # load all the data from the left menu
                                                         'tasks': tasks,
                                                         'images': images,
@@ -44,14 +47,16 @@ def show_list(request):
 
 
 
-    return HttpResponse(html)
-    """return render(request, 'list/index_list.html',
+        return HttpResponse(html)
+        """return render(request, 'list/index_list.html',
                   {'articles': articles,                                # List the items in the main interface
                    'categories': categories,                            # load all the data from the left menu
                    'tasks': tasks,
                    'images': images,
                    'dataSources': dataSources}
                   )"""
+    except ValueError:
+        print("The value entered is incorrect.")
 
 """Method to update the articles depending on the category marked in the view:
     Input: Ajax @peticion of the view with the check marked.
@@ -118,12 +123,12 @@ def update_article_task(request):
      Returns True if that item has this category, False otherwise.
 """
 def serach_category(s_article, s_category):
-
     list_cat_art = list(s_article.categories.all())             #All categories of the article that comes as an entry
-
-    for c in range(0, len(list_cat_art)):                      #Search if the entry category exists in the article
+    c=0
+    while c < len(list_cat_art):                                 #Search if the entry category exists in the article
         if list_cat_art[c].category == s_category:
           return True
+        c+=1
     return False
 
 
@@ -134,10 +139,12 @@ def serach_category(s_article, s_category):
 def search_task(s_article, s_task):
 
     list_task_art = list(s_article.tasks.all())                   #Task list of the input article
-
-    for t in range(0,len(list_task_art)):                         #Search if the task exists in the article
+    t = 0
+    while t < len(list_task_art):
+    #for t in range(0,len(list_task_art)):                         #Search if the task exists in the article
         if list_task_art[t].task == s_task:
             return True
+        t += 1
     return False
 
 
@@ -148,6 +155,7 @@ def search_task(s_article, s_task):
 def search(request):
 
     search_query = request.POST.get('my_form')
+    print(search_query)
     list_task_serch = request.POST.getlist('list_task_search[]')
     lista_cat_buscar = request.POST.getlist('list_cat_search[]')
     dataSources = DataSource.objects.all()
@@ -159,36 +167,40 @@ def search(request):
         articles = list(Article.objects.filter(                         # Query to search by title and author
             Q(title__contains= search_query) |
             Q(author__contains =search_query)))
+    try:
+        if len(articles) > 1:
+            x=0                                               #Search in the articles of the query if they have the task marked
+            while x < len(articles):
+                for y in range(0, len(list_task_serch)):
+                    if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
+                        all_articles.append(articles[x])
+                        articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
+                        x +=1
+                        break
 
-    if len(articles) > 1:
-        x=0                                               #Search in the articles of the query if they have the task marked
-        while x < len(articles):
-            for y in range(0, (len(list_task_serch)-1)):
-                if search_task(articles[x], list_task_serch[y]):    #Auxiliary method that says if a task is in an article
-                    all_articles.append(articles[x])
-                    articles.remove(articles[x])                    #I am deleting the articles that match so as not to search for them by categories
-                    x +=1
-                    break
-                x +=1
     # Decrease complexity O(n)
-    else:
-        for z in range(0, (len(list_task_serch)-1)):
-            if search_task(articles[0], list_task_serch[z]):
-                all_articles.append(articles[0])
-                articles.remove(articles[0])
-                break
+        else:
+            if len(articles) == 1:
+                for z in range(0, len(list_task_serch)):
+                    if search_task(articles[0], list_task_serch[z]):
+                        all_articles.append(articles[0])
+                        articles.remove(articles[0])
+                        break
 
-    if len(articles) > 0:
-        w =0                                               #The remaining items, see if they have the category marked
-        while w < len(articles):
-            for r in range(0, (len(lista_cat_buscar)-1)):
-                if serach_category(articles[w], lista_cat_buscar[r]):
-                    all_articles.append(articles[w])
-                    w+=1
-                    break
+        if len(articles) > 0:
+            print("entro a revisar categorias")
+            w = 0                                               #The remaining items, see if they have the category marked
+            while w < len(articles):
+                for r in range(0, len(lista_cat_buscar)):
+                    if serach_category(articles[w], lista_cat_buscar[r]):
+                        all_articles.append(articles[w])
+                        w+=1
+                        break
 
-    return all_articles, list_task_serch, lista_cat_buscar, dataSources
+        return all_articles, list_task_serch, lista_cat_buscar, dataSources
 
+    except Exception as e:
+        print(e)
 
 """Method to visualize the details of the article
      Input: a selected article
