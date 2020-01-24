@@ -10,7 +10,6 @@ $(document).ready(function() {
         ajax_post_tareas();
     });
 
-
     $('#Modal').on('shown.bs.modal', function (event) {
         id_article = event.relatedTarget.id;
         var modal = $(this);
@@ -38,6 +37,11 @@ $(document).ready(function() {
 
     });
 
+    $('#SearchForm').bind('keydown', function(e) {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+        }
+    });
 
     $('#searchbutton').click(function f() {
         ajax_button_search();
@@ -61,7 +65,7 @@ function getCookie(name) {
     }
 
     return cookieValue;
-};
+}
 
 async function ajax_post_tareas(){
      var lista_task = [];
@@ -92,7 +96,7 @@ async function ajax_post_tareas(){
                 alert("error");
             }
         });
-    };
+    }
 
 async function ajax_post_categorias() {
     var list_marcados = [];
@@ -126,7 +130,7 @@ async function ajax_post_categorias() {
             }
         });
 
-    };
+    }
 
 async function ajax_button_search() {
     let my_form = $('#searchInput').val();
@@ -174,7 +178,7 @@ async function ajax_button_search() {
 function enviar() {
     var msj = "¿Tas?";
     alert(msj);
-};
+}
 
 });
 

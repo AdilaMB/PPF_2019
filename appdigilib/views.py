@@ -155,7 +155,7 @@ def search_task(s_article, s_task):
 def search(request):
 
     search_query = request.POST.get('my_form')
-    print(search_query)
+
     list_task_serch = request.POST.getlist('list_task_search[]')
     lista_cat_buscar = request.POST.getlist('list_cat_search[]')
     dataSources = DataSource.objects.all()
@@ -188,7 +188,7 @@ def search(request):
                         break
 
         if len(articles) > 0:
-            print("entro a revisar categorias")
+
             w = 0                                               #The remaining items, see if they have the category marked
             while w < len(articles):
                 for r in range(0, len(lista_cat_buscar)):
