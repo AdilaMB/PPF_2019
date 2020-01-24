@@ -9,8 +9,8 @@
              <div class="col-md-12">
                 {%endif%}
             <div class="col-md-4" >
-                <div class="panel panel-primary" data-target="#Modal" >
-                    <div class="panel-heading" data-toggle="modal" id="{{ article.id }}" data-whatever="{{article.title}}">{{ article.title}}</div>
+                <div class="panel panel-primary" >
+                    <div class="panel-heading" data-toggle="modal" data-target="#Modal" id="{{ article.id }}" data-whatever="{{article.title}}">{{ article.title}}</div>
                     <div data-whatever= "{{ article.author }}"> {{ article.autor}}</div>
 
                     <div class="panel-body"><img width="300" height="183" style="width:100%" src="{{article.image.image.url}}"></div>
