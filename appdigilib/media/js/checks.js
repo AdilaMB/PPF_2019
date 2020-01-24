@@ -36,7 +36,7 @@ $(document).ready(function() {
         });
 
     });
-
+    //Disable "Enter" on keyboard
     $('#SearchForm').bind('keydown', function(e) {
         if (e.keyCode === 13) {
             e.preventDefault();
