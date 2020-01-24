@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="Update requirement.txt&#10;Disable Enter&#10;Update DB: Highlight">
+    <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="Update click in the article">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appdigilib/media/js/checks.js" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/media/js/checks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appdigilib/templates/list/index_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/templates/list/index_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appdigilib/templates/list/render.html" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/templates/list/render.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +107,7 @@
       <workItem from="1579783460274" duration="1134000" />
       <workItem from="1579814458615" duration="5601000" />
       <workItem from="1579828412065" duration="5304000" />
-      <workItem from="1579885446732" duration="1214000" />
+      <workItem from="1579885446732" duration="2402000" />
     </task>
     <task id="LOCAL-00001" summary="Change button name, include HeatMap and WordCloud Metods,&#10;URL in other file">
       <created>1572820522300</created>
@@ -223,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579835797299</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update click in the article">
+      <created>1579886734269</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579886734269</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -272,21 +277,22 @@
     <MESSAGE value="Update CSRF" />
     <MESSAGE value="Update requirement.txt&#10;Disable Enter&#10;Update DB: Highlight" />
     <MESSAGE value="Update the Link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the Link" />
+    <MESSAGE value="Update click in the article" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update click in the article" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1579835796205">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1579886732307">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579835796205" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579886732307" />
     <state x="297" y="0" key="SettingsEditor" timestamp="1579783752934">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="297" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579783752934" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1579835625691">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1579886745897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579835625691" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579886745897" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579783485274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
