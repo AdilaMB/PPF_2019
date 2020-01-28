@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="Update click in the article">
+    <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="Update DB with urls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdigilib/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appdigilib/templates/list/render.html" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/templates/list/render.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -107,7 +109,9 @@
       <workItem from="1579783460274" duration="1134000" />
       <workItem from="1579814458615" duration="5601000" />
       <workItem from="1579828412065" duration="5304000" />
-      <workItem from="1579885446732" duration="2402000" />
+      <workItem from="1579885446732" duration="2510000" />
+      <workItem from="1579896462656" duration="2983000" />
+      <workItem from="1580216586062" duration="224000" />
     </task>
     <task id="LOCAL-00001" summary="Change button name, include HeatMap and WordCloud Metods,&#10;URL in other file">
       <created>1572820522300</created>
@@ -228,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579886734269</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update DB with urls">
+      <created>1579889502343</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579889502343</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -278,21 +289,22 @@
     <MESSAGE value="Update requirement.txt&#10;Disable Enter&#10;Update DB: Highlight" />
     <MESSAGE value="Update the Link" />
     <MESSAGE value="Update click in the article" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update click in the article" />
+    <MESSAGE value="Update DB with urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update DB with urls" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1579886732307">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1579889501293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579886732307" />
-    <state x="297" y="0" key="SettingsEditor" timestamp="1579783752934">
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579889501293" />
+    <state x="297" y="0" key="SettingsEditor" timestamp="1579896664692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="297" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579783752934" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1579886745897">
+    <state x="297" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579896664692" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580216813969">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1579886745897" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580216813969" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579783485274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
