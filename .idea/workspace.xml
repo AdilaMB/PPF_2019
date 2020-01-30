@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="15cf551c-35de-4798-9485-a45c5e5a52a4" name="Default" comment="Update DB with urls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appdigilib/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appdigilib/templates/list/render.html" beforeDir="false" afterPath="$PROJECT_DIR$/appdigilib/templates/list/render.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +111,9 @@
       <workItem from="1579885446732" duration="2510000" />
       <workItem from="1579896462656" duration="2983000" />
       <workItem from="1580216586062" duration="224000" />
+      <workItem from="1580219274077" duration="800000" />
+      <workItem from="1580385576503" duration="1922000" />
+      <workItem from="1580419820396" duration="575000" />
     </task>
     <task id="LOCAL-00001" summary="Change button name, include HeatMap and WordCloud Metods,&#10;URL in other file">
       <created>1572820522300</created>
@@ -293,26 +295,27 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update DB with urls" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1579889501293">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1580216849860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579889501293" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580216849860" />
     <state x="297" y="0" key="SettingsEditor" timestamp="1579896664692">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="297" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579896664692" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580216813969">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1580420467443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580216813969" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580420467443" />
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1579783485274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579783485274" />
-    <state x="410" y="156" key="git4idea.merge.GitPullDialog" timestamp="1579748302263">
+    <state x="410" y="156" key="git4idea.merge.GitPullDialog" timestamp="1580420448233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1579748302263" />
+    <state x="410" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1280.984@0.0.1366.728" timestamp="1580387588609" />
+    <state x="410" y="156" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1580420448233" />
   </component>
   <component name="masterDetails">
     <states>
